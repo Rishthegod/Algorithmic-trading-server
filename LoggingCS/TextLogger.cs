@@ -26,7 +26,7 @@ namespace TradingEngineServer.Logging
             {
                 while (true)
                 {
-                    var logitem = await logQueue.ReceiveAsync(token).ConfigureAwait(false);
+                    var logitem = await logQueue.ReceiveAsync(token).ConfigureAwait(false); //Hello world
                     string formattedMessage = FormatLogItem(logitem);
                     await sw.WriteAsync(formattedMessage).ConfigureAwait(false);
                 }
